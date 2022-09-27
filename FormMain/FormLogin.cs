@@ -11,13 +11,13 @@ using Usuarios;
 
 namespace FormMain
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
         public Usuario usuario;
         public static IngresoUsuario operador;
 
 
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace FormMain
         {
             this.usuario = new Usuario(this.textBox1.Text.ToString(), this.textBox2.Text.ToString());
 
-            if(Form1.operador == this.usuario)
+            if(FormLogin.operador == this.usuario)
             {
                 this.DialogResult = DialogResult.OK;
             }

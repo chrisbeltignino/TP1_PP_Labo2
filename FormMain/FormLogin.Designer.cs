@@ -1,7 +1,7 @@
 ﻿
 namespace FormMain
 {
-    partial class Form1
+    partial class FormLogin
     {
         /// <summary>
         ///  Required designer variable.
