@@ -6,10 +6,45 @@ using System.Threading.Tasks;
 
 namespace Compañia
 {
-    class Equipajes
+    public class Equipajes
     {
-        private bool bolsoOManija;
+        private bool bolsoMano;
         private int cantValijas;
-        private int pesoTotal;
+        private float pesoTotal;
+
+        public Equipajes(bool bolsoMano, int cantValijas, float pesoTotal)
+        {
+            this.bolsoMano = bolsoMano;
+            this.cantValijas = cantValijas;
+            this.pesoTotal = pesoTotal;
+        }
+
+        public string Bolso
+        {
+            get
+            {
+                string bolso = "No";
+                if (bolsoMano == true)
+                {
+                    bolso = "Si";
+                }
+                return bolso;
+            }
+        }
+
+        private string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Equipaje: \n" +
+                          $"Bolso de mano: {this.Bolso}\n" +
+                          $"Peso de valijas: {this.pesoTotal}kg\n" +
+                          $"Cantidad de valijas {this.cantValijas}\n");
+
+            return sb.ToString();
+        }
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
     }
 }

@@ -23,14 +23,67 @@ namespace Compañia
             this.vencimiento = vencimiento;
         }
 
+        public string Sexo
+        {
+            get
+            {
+                return this.sexo.ToString();
+            }
+        }
+
+        public int Dni
+        {
+            get
+            {
+                return this.dni;
+            }
+        }
+
         public static bool operator ==(Pasaporte p1, Pasaporte p2)
         {
             bool isOk = false;
-            if (p1 == p2)
+            if (!(p1 is null || p2 is null))
             {
-                isOk = true;
+                isOk = (p1.numPasaporte == p2.numPasaporte);
             }
             return isOk;
+        }
+
+        public static bool operator !=(Pasaporte p1, Pasaporte p2)
+        {
+            return !(p1 == p2);
+        }
+
+        private string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Pasaporte: \n" +
+                          $"Numero {this.numPasaporte} \n" +
+                          $"DNI {this.dni} \n" +
+                          $"Nacionalidad {this.nacionalidad} \n" +
+                          $"Sexo {this.sexo} \n" +
+                          $"Fecha Venc: {this.vencimiento}");
+
+            return sb.ToString();
+        }
+
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool isOk = false;
+            if (obj is Pasaporte)
+            {
+                isOk = this == ((Pasaporte)obj);
+            }
+            return isOk;
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
