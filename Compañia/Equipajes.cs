@@ -10,7 +10,7 @@ namespace Compañia
     {
         private bool bolsoMano;
         private int cantValijas;
-        private float pesoTotal;
+        private double pesoTotal;
 
         public Equipajes(bool bolsoMano, int cantValijas, float pesoTotal)
         {

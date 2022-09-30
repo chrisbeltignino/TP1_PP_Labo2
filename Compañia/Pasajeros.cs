@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Compañia
 {
-    class Pasajeros
+    public class Pasajeros
     {
         private string nombre;
         private string apellido;
