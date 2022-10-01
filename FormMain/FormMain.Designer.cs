@@ -29,94 +29,323 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelSIdeMenu = new System.Windows.Forms.Panel();
+            this.panelSubMenuEstadistica = new System.Windows.Forms.Panel();
+            this.btn_Destino = new System.Windows.Forms.Button();
+            this.btn_CantPasajeros = new System.Windows.Forms.Button();
+            this.btn_Recaudacion = new System.Windows.Forms.Button();
+            this.btn_Estadisticas = new System.Windows.Forms.Button();
+            this.panelSubMenuCruceros = new System.Windows.Forms.Panel();
+            this.btn_InfoCruceros = new System.Windows.Forms.Button();
+            this.btn_VenderCrucero = new System.Windows.Forms.Button();
+            this.btn_Cruceros = new System.Windows.Forms.Button();
+            this.panelSubMenuViajes = new System.Windows.Forms.Panel();
+            this.btn_InfoPasajeros = new System.Windows.Forms.Button();
+            this.btn_CrearViaje = new System.Windows.Forms.Button();
+            this.btn_VerViajes = new System.Windows.Forms.Button();
+            this.btn_Viajes = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelFormulario = new System.Windows.Forms.Panel();
+            this.panelSIdeMenu.SuspendLayout();
+            this.panelSubMenuEstadistica.SuspendLayout();
+            this.panelSubMenuCruceros.SuspendLayout();
+            this.panelSubMenuViajes.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // panelSIdeMenu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(461, 454);
-            this.dataGridView1.TabIndex = 0;
+            this.panelSIdeMenu.AutoScroll = true;
+            this.panelSIdeMenu.BackColor = System.Drawing.Color.Black;
+            this.panelSIdeMenu.Controls.Add(this.panelSubMenuEstadistica);
+            this.panelSIdeMenu.Controls.Add(this.btn_Estadisticas);
+            this.panelSIdeMenu.Controls.Add(this.panelSubMenuCruceros);
+            this.panelSIdeMenu.Controls.Add(this.btn_Cruceros);
+            this.panelSIdeMenu.Controls.Add(this.panelSubMenuViajes);
+            this.panelSIdeMenu.Controls.Add(this.btn_Viajes);
+            this.panelSIdeMenu.Controls.Add(this.panelLogo);
+            this.panelSIdeMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSIdeMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSIdeMenu.Name = "panelSIdeMenu";
+            this.panelSIdeMenu.Size = new System.Drawing.Size(200, 561);
+            this.panelSIdeMenu.TabIndex = 6;
             // 
-            // button1
+            // panelSubMenuEstadistica
             // 
-            this.button1.Location = new System.Drawing.Point(515, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Crear Viaje";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panelSubMenuEstadistica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelSubMenuEstadistica.Controls.Add(this.btn_Destino);
+            this.panelSubMenuEstadistica.Controls.Add(this.btn_CantPasajeros);
+            this.panelSubMenuEstadistica.Controls.Add(this.btn_Recaudacion);
+            this.panelSubMenuEstadistica.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuEstadistica.Location = new System.Drawing.Point(0, 379);
+            this.panelSubMenuEstadistica.Name = "panelSubMenuEstadistica";
+            this.panelSubMenuEstadistica.Size = new System.Drawing.Size(200, 102);
+            this.panelSubMenuEstadistica.TabIndex = 6;
+            this.panelSubMenuEstadistica.Visible = false;
             // 
-            // button2
+            // btn_Destino
             // 
-            this.button2.Location = new System.Drawing.Point(515, 111);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Vender crucero";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Destino.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Destino.FlatAppearance.BorderSize = 0;
+            this.btn_Destino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_Destino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_Destino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Destino.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_Destino.Location = new System.Drawing.Point(0, 69);
+            this.btn_Destino.Name = "btn_Destino";
+            this.btn_Destino.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_Destino.Size = new System.Drawing.Size(200, 30);
+            this.btn_Destino.TabIndex = 4;
+            this.btn_Destino.Text = "Destino mas elegido";
+            this.btn_Destino.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Destino.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_CantPasajeros
             // 
-            this.button3.Location = new System.Drawing.Point(515, 192);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 47);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Informacion";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_CantPasajeros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_CantPasajeros.FlatAppearance.BorderSize = 0;
+            this.btn_CantPasajeros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_CantPasajeros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_CantPasajeros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CantPasajeros.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_CantPasajeros.Location = new System.Drawing.Point(0, 30);
+            this.btn_CantPasajeros.Name = "btn_CantPasajeros";
+            this.btn_CantPasajeros.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_CantPasajeros.Size = new System.Drawing.Size(200, 39);
+            this.btn_CantPasajeros.TabIndex = 3;
+            this.btn_CantPasajeros.Text = "Cant. de pasajeros por crucero";
+            this.btn_CantPasajeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_CantPasajeros.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_Recaudacion
             // 
-            this.button4.Location = new System.Drawing.Point(536, 288);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Historial";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_Recaudacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Recaudacion.FlatAppearance.BorderSize = 0;
+            this.btn_Recaudacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_Recaudacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_Recaudacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Recaudacion.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_Recaudacion.Location = new System.Drawing.Point(0, 0);
+            this.btn_Recaudacion.Name = "btn_Recaudacion";
+            this.btn_Recaudacion.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_Recaudacion.Size = new System.Drawing.Size(200, 30);
+            this.btn_Recaudacion.TabIndex = 2;
+            this.btn_Recaudacion.Text = "Recaudación";
+            this.btn_Recaudacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Recaudacion.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_Estadisticas
             // 
-            this.button5.Location = new System.Drawing.Point(536, 400);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_Estadisticas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Estadisticas.FlatAppearance.BorderSize = 0;
+            this.btn_Estadisticas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Estadisticas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_Estadisticas.Location = new System.Drawing.Point(0, 339);
+            this.btn_Estadisticas.Name = "btn_Estadisticas";
+            this.btn_Estadisticas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Estadisticas.Size = new System.Drawing.Size(200, 40);
+            this.btn_Estadisticas.TabIndex = 5;
+            this.btn_Estadisticas.Text = "Estadisticas";
+            this.btn_Estadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Estadisticas.UseVisualStyleBackColor = true;
+            this.btn_Estadisticas.Click += new System.EventHandler(this.btn_Estadisticas_Click);
+            // 
+            // panelSubMenuCruceros
+            // 
+            this.panelSubMenuCruceros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelSubMenuCruceros.Controls.Add(this.btn_InfoCruceros);
+            this.panelSubMenuCruceros.Controls.Add(this.btn_VenderCrucero);
+            this.panelSubMenuCruceros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuCruceros.Location = new System.Drawing.Point(0, 274);
+            this.panelSubMenuCruceros.Name = "panelSubMenuCruceros";
+            this.panelSubMenuCruceros.Size = new System.Drawing.Size(200, 65);
+            this.panelSubMenuCruceros.TabIndex = 4;
+            this.panelSubMenuCruceros.Visible = false;
+            // 
+            // btn_InfoCruceros
+            // 
+            this.btn_InfoCruceros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_InfoCruceros.FlatAppearance.BorderSize = 0;
+            this.btn_InfoCruceros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_InfoCruceros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_InfoCruceros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InfoCruceros.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_InfoCruceros.Location = new System.Drawing.Point(0, 30);
+            this.btn_InfoCruceros.Name = "btn_InfoCruceros";
+            this.btn_InfoCruceros.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_InfoCruceros.Size = new System.Drawing.Size(200, 30);
+            this.btn_InfoCruceros.TabIndex = 3;
+            this.btn_InfoCruceros.Text = "Informacion de Cruceros";
+            this.btn_InfoCruceros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_InfoCruceros.UseVisualStyleBackColor = true;
+            // 
+            // btn_VenderCrucero
+            // 
+            this.btn_VenderCrucero.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_VenderCrucero.FlatAppearance.BorderSize = 0;
+            this.btn_VenderCrucero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_VenderCrucero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_VenderCrucero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VenderCrucero.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_VenderCrucero.Location = new System.Drawing.Point(0, 0);
+            this.btn_VenderCrucero.Name = "btn_VenderCrucero";
+            this.btn_VenderCrucero.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_VenderCrucero.Size = new System.Drawing.Size(200, 30);
+            this.btn_VenderCrucero.TabIndex = 2;
+            this.btn_VenderCrucero.Text = "Vender Crucero";
+            this.btn_VenderCrucero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_VenderCrucero.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cruceros
+            // 
+            this.btn_Cruceros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Cruceros.FlatAppearance.BorderSize = 0;
+            this.btn_Cruceros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Cruceros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cruceros.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_Cruceros.Location = new System.Drawing.Point(0, 234);
+            this.btn_Cruceros.Name = "btn_Cruceros";
+            this.btn_Cruceros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Cruceros.Size = new System.Drawing.Size(200, 40);
+            this.btn_Cruceros.TabIndex = 3;
+            this.btn_Cruceros.Text = "Cruceros";
+            this.btn_Cruceros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Cruceros.UseVisualStyleBackColor = true;
+            this.btn_Cruceros.Click += new System.EventHandler(this.btn_Cruceros_Click);
+            // 
+            // panelSubMenuViajes
+            // 
+            this.panelSubMenuViajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelSubMenuViajes.Controls.Add(this.btn_InfoPasajeros);
+            this.panelSubMenuViajes.Controls.Add(this.btn_CrearViaje);
+            this.panelSubMenuViajes.Controls.Add(this.btn_VerViajes);
+            this.panelSubMenuViajes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuViajes.Location = new System.Drawing.Point(0, 140);
+            this.panelSubMenuViajes.Name = "panelSubMenuViajes";
+            this.panelSubMenuViajes.Size = new System.Drawing.Size(200, 94);
+            this.panelSubMenuViajes.TabIndex = 2;
+            this.panelSubMenuViajes.Visible = false;
+            // 
+            // btn_InfoPasajeros
+            // 
+            this.btn_InfoPasajeros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_InfoPasajeros.FlatAppearance.BorderSize = 0;
+            this.btn_InfoPasajeros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_InfoPasajeros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_InfoPasajeros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InfoPasajeros.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_InfoPasajeros.Location = new System.Drawing.Point(0, 60);
+            this.btn_InfoPasajeros.Name = "btn_InfoPasajeros";
+            this.btn_InfoPasajeros.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_InfoPasajeros.Size = new System.Drawing.Size(200, 30);
+            this.btn_InfoPasajeros.TabIndex = 4;
+            this.btn_InfoPasajeros.Text = "Informacion de Pasajeros";
+            this.btn_InfoPasajeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_InfoPasajeros.UseVisualStyleBackColor = true;
+            // 
+            // btn_CrearViaje
+            // 
+            this.btn_CrearViaje.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_CrearViaje.FlatAppearance.BorderSize = 0;
+            this.btn_CrearViaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_CrearViaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_CrearViaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CrearViaje.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_CrearViaje.Location = new System.Drawing.Point(0, 30);
+            this.btn_CrearViaje.Name = "btn_CrearViaje";
+            this.btn_CrearViaje.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_CrearViaje.Size = new System.Drawing.Size(200, 30);
+            this.btn_CrearViaje.TabIndex = 3;
+            this.btn_CrearViaje.Text = "Crear Viaje";
+            this.btn_CrearViaje.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_CrearViaje.UseVisualStyleBackColor = true;
+            // 
+            // btn_VerViajes
+            // 
+            this.btn_VerViajes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_VerViajes.FlatAppearance.BorderSize = 0;
+            this.btn_VerViajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_VerViajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btn_VerViajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VerViajes.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_VerViajes.Location = new System.Drawing.Point(0, 0);
+            this.btn_VerViajes.Name = "btn_VerViajes";
+            this.btn_VerViajes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_VerViajes.Size = new System.Drawing.Size(200, 30);
+            this.btn_VerViajes.TabIndex = 2;
+            this.btn_VerViajes.Text = "Ver Viajes";
+            this.btn_VerViajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_VerViajes.UseVisualStyleBackColor = true;
+            // 
+            // btn_Viajes
+            // 
+            this.btn_Viajes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Viajes.FlatAppearance.BorderSize = 0;
+            this.btn_Viajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Viajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Viajes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_Viajes.Location = new System.Drawing.Point(0, 100);
+            this.btn_Viajes.Name = "btn_Viajes";
+            this.btn_Viajes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Viajes.Size = new System.Drawing.Size(200, 40);
+            this.btn_Viajes.TabIndex = 1;
+            this.btn_Viajes.Text = "Viajes";
+            this.btn_Viajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Viajes.UseVisualStyleBackColor = true;
+            this.btn_Viajes.Click += new System.EventHandler(this.btn_Viajes_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(200, 100);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // panelFormulario
+            // 
+            this.panelFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panelFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormulario.Location = new System.Drawing.Point(200, 0);
+            this.panelFormulario.Name = "panelFormulario";
+            this.panelFormulario.Size = new System.Drawing.Size(684, 561);
+            this.panelFormulario.TabIndex = 7;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 498);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.panelFormulario);
+            this.Controls.Add(this.panelSIdeMenu);
+            this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "Form2";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelSIdeMenu.ResumeLayout(false);
+            this.panelSubMenuEstadistica.ResumeLayout(false);
+            this.panelSubMenuCruceros.ResumeLayout(false);
+            this.panelSubMenuViajes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panelSIdeMenu;
+        private System.Windows.Forms.Panel panelSubMenuViajes;
+        private System.Windows.Forms.Button btn_CrearViaje;
+        private System.Windows.Forms.Button btn_VerViajes;
+        private System.Windows.Forms.Button btn_Viajes;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelSubMenuEstadistica;
+        private System.Windows.Forms.Button btn_Destino;
+        private System.Windows.Forms.Button btn_CantPasajeros;
+        private System.Windows.Forms.Button btn_Recaudacion;
+        private System.Windows.Forms.Button btn_Estadisticas;
+        private System.Windows.Forms.Panel panelSubMenuCruceros;
+        private System.Windows.Forms.Button btn_InfoCruceros;
+        private System.Windows.Forms.Button btn_VenderCrucero;
+        private System.Windows.Forms.Button btn_Cruceros;
+        private System.Windows.Forms.Button btn_InfoPasajeros;
+        private System.Windows.Forms.Panel panelFormulario;
     }
 }

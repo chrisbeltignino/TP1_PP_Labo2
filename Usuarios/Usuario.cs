@@ -37,21 +37,51 @@ namespace Usuarios
         {
             bool isOk = false;
             {
-                if (!(usuarioX is null) || (usuarioY is null))
+                if (!(usuarioX is null) || (usuarioY is null) && (usuarioX.nombreUsuario == usuarioY.nombreUsuario) && (usuarioX.contraseña == usuarioY.contraseña))
                 {
-                    if ((usuarioX.nombreUsuario == usuarioY.nombreUsuario) && (usuarioX.contraseña == usuarioY.contraseña))
-                    {
-                        isOk = true;
-                    }
+                    isOk = true;
                 }
                 return isOk;
             }
         }
 
-        public static bool operator !=(Usuario usuarioX, Usuario usuarioY) //compara por el operador != dos usuarios
+        public static bool operator !=(Usuario usuarioX, Usuario usuarioY)
         {
             return !(usuarioX == usuarioY);
         }
         #endregion SOBRECARGA
+
+        public string Nombre
+        {
+            get
+            {
+                return this.nombreUsuario;
+            }
+        }
+
+        public string Contraseña
+        {
+            get
+            {
+                return this.contraseña;
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool equals = false;
+            if (obj is Usuario)
+            {
+                equals = this == ((Usuario)obj);
+            }
+
+            return equals;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+
+        }
     }
 }

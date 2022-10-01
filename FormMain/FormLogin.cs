@@ -14,7 +14,7 @@ namespace FormMain
     public partial class FormLogin : Form
     {
         public Usuario usuario;
-        public static IngresoUsuario operador;
+        public static IngresoUsuario usuarioExistente;
 
 
         public FormLogin()
@@ -22,25 +22,33 @@ namespace FormMain
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Usuario usuario1 = new Usuario("christignino", "100727");
+            Usuario usuario2 = new Usuario("robert", "01234");
+            Usuario usuario3 = new Usuario("guardian", "espectro");
+
+            usuarioExistente = new IngresoUsuario();
+            usuarioExistente += usuario1;
+            usuarioExistente += usuario2;
+            usuarioExistente += usuario3;
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            Form2 form = new Form2();
             this.usuario = new Usuario(this.textBox1.Text.ToString(), this.textBox2.Text.ToString());
 
-            if(FormLogin.operador == this.usuario)
+            if(FormLogin.usuarioExistente == this.usuario)
             {
                 this.DialogResult = DialogResult.OK;
+                form.Show(this);
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Usuario Inexistente");
+                MessageBox.Show("Este usuario no existe");
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Usuario usUno = new Usuario("christignino", "100727");
-            Usuario usDos = new Usuario("robert", "01234");
-            Usuario usTres = new Usuario("guardian", "espectro");
         }
     }
 }

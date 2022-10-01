@@ -47,24 +47,47 @@ namespace Usuarios
             }
         }
 
-        public static bool operator ==(IngresoUsuario ingreso, Usuario usuario)
+        public static bool operator ==(IngresoUsuario op, Usuario usuario)
         {
-            return ingreso.Indice(usuario) > -1;
+            return op.Indice(usuario) > -1;
         }
 
-        public static bool operator !=(IngresoUsuario ingreso, Usuario usuario)
+        public static bool operator !=(IngresoUsuario op, Usuario usuario)
         {
-            return !(ingreso.Indice(usuario) > -1);
+            return !(op.Indice(usuario) > -1);
         }
 
-        public static IngresoUsuario operator +(IngresoUsuario ingreso, Usuario usuario)
+        public static IngresoUsuario operator +(IngresoUsuario op, Usuario usuario)
         {
-            if (ingreso != usuario)
+            if (op != usuario)
             {
-                ingreso.usuario.Add(usuario);
+                op.usuario.Add(usuario);
             }
 
-            return ingreso;
+            return op;
+        }
+
+        public int Count
+        {
+            get
+            {
+                return this.usuario.Count;
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool equals = false;
+            if (obj is IngresoUsuario)
+            {
+                equals = this == ((IngresoUsuario)obj);
+            }
+            return equals;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
