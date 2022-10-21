@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Text;
 
 namespace Compañia
 {
     public class Viajes
     {
-        private static CiudadesPartida ciudadPartida;
+        private static eCiudadesPartida ciudadPartida;
         private Destino destino;
         private DateTime fechaInicio;
         private Cruceros crucero;
@@ -16,7 +17,7 @@ namespace Compañia
 
         static Viajes()
         {
-            Viajes.ciudadPartida = CiudadesPartida.CABA;
+            Viajes.ciudadPartida = eCiudadesPartida.CABA;
         }
         public Viajes()
         {
@@ -29,7 +30,7 @@ namespace Compañia
             this.destino = null;
         }
 
-        public CiudadesPartida CiudadesPartida
+        public eCiudadesPartida CiudadesPartida
         {
             set
             {
@@ -65,6 +66,87 @@ namespace Compañia
             {
                 return this.crucero;
             }
+        }
+
+        public DateTime FechaPartida
+        {
+            set
+            {
+                this.fechaInicio = value;
+            }
+            get
+            {
+                return this.fechaInicio;
+            }
+        }
+
+        public int CamarotesTurista
+        {
+            get
+            {
+                return this.camarotesTurista;
+            }
+            set
+            {
+                this.camarotesTurista = value;
+            }
+        }
+
+        public int CamarotesPremium
+        {
+            get
+            {
+                return this.camarotesPremium;
+            }
+            set
+            {
+                this.camarotesPremium = value;
+            }
+        }
+
+        public double PrecioTurista
+        {
+            get
+            {
+                return this.precioTurista;
+            }
+        }
+
+        public double PrecioPremium
+        {
+            get
+            {
+                return this.precioPremium;
+            }
+        }
+
+        public double HorasDeViaje
+        {
+            get
+            {
+                return this.duracion;
+            }
+        }
+
+
+        private string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            string cadena;
+            sb.AppendLine("|DATOS DEL VIAJE-------------------------------|");
+            cadena = this.CiudadesPartida.ToString();
+            sb.AppendLine($"|Ciudad de partida {cadena.Replace("_", " ")}");
+            sb.AppendLine($"|Ciudad de destino {this.destino.DestinoSeleccionado}");
+            sb.AppendLine($"|Fecha de inicio {this.fechaInicio.ToString("dd/MM/yyyy")}");
+            sb.AppendLine($"|Crucero {this.Crucero.Nombre} {this.Crucero.Matricula}");
+            sb.AppendLine($"|Camarotes Turista {this.camarotesTurista}");
+            sb.AppendLine($"|Camarotes Premium {this.camarotesPremium}");
+            sb.AppendLine($"|Precio pasaje Turista ${this.precioTurista}");
+            sb.AppendLine($"|Precio pasaje Premium ${this.precioPremium}");
+            sb.AppendLine($"|Horas del viaje {this.duracion}");
+            sb.AppendLine("|----------------------------------------------|");
+
+            return sb.ToString();
         }
 
         private void CalcularCamarotes()
@@ -132,6 +214,38 @@ namespace Compañia
         public static bool operator !=(Viajes v1, Viajes v2)
         {
             return !(v1 == v2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool equals = false;
+            if (obj is Viajes)
+            {
+                equals = this == ((Viajes)obj);
+            }
+
+            return equals;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
+        public bool ViajeDisponible(Viajes v)
+        {
+            bool disponible = false;
+            DateTime dtNow = DateTime.Now;
+            DateTime dtV = v.fechaInicio;
+
+            disponible = (v.camarotesPremium > 0 || v.camarotesTurista > 0) && (dtV > dtNow);
+
+            return disponible;
         }
     }
 }

@@ -16,7 +16,6 @@ namespace FormMain
         public Usuario usuario;
         public static IngresoUsuario usuarioExistente;
 
-
         public FormLogin()
         {
             InitializeComponent();
@@ -36,7 +35,7 @@ namespace FormMain
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            FormMain form = new FormMain();
             this.usuario = new Usuario(this.textBox1.Text.ToString(), this.textBox2.Text.ToString());
 
             if(FormLogin.usuarioExistente == this.usuario)

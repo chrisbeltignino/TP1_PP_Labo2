@@ -1,4 +1,4 @@
-﻿public enum Destinos
+﻿public enum eDestinos
 {
     Montevideo,
     Ushuaia,
@@ -18,10 +18,8 @@
     Bangkok,
     Taipei,
     Atenas,
-
-
 }
-public enum CiudadesPartida
+public enum eCiudadesPartida
 {
     CABA,
     Mar_del_Plata,

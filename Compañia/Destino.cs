@@ -8,10 +8,10 @@ namespace Compañia
 {
     public class Destino
     {
-        private Destinos destino;
+        private eDestinos destino;
         private bool regional;
 
-        public Destino(Destinos destino, bool esRegional)
+        public Destino(eDestinos destino, bool esRegional)
         {
             this.destino = destino;
             this.regional = esRegional;

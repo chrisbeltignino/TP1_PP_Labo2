@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgramForm", "FormMain\ProgramForm.csproj", "{7E84C53F-00E0-4C41-B63C-492E8292685B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormMain", "FormMain\FormMain.csproj", "{7E84C53F-00E0-4C41-B63C-492E8292685B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usuarios", "Usuarios\Usuarios.csproj", "{00FDDE90-999D-4823-BD2C-0C65C4BE3989}"
 EndProject

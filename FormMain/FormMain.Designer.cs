@@ -1,7 +1,7 @@
 ﻿
 namespace FormMain
 {
-    partial class Form2
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelSIdeMenu = new System.Windows.Forms.Panel();
             this.panelSubMenuEstadistica = new System.Windows.Forms.Panel();
             this.btn_Destino = new System.Windows.Forms.Button();
@@ -46,10 +47,13 @@ namespace FormMain
             this.btn_Viajes = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFormulario = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSIdeMenu.SuspendLayout();
             this.panelSubMenuEstadistica.SuspendLayout();
             this.panelSubMenuCruceros.SuspendLayout();
             this.panelSubMenuViajes.SuspendLayout();
+            this.panelFormulario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSIdeMenu
@@ -138,6 +142,7 @@ namespace FormMain
             this.btn_Estadisticas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Estadisticas.FlatAppearance.BorderSize = 0;
             this.btn_Estadisticas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_Estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Estadisticas.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Estadisticas.Location = new System.Drawing.Point(0, 339);
@@ -178,6 +183,7 @@ namespace FormMain
             this.btn_InfoCruceros.Text = "Informacion de Cruceros";
             this.btn_InfoCruceros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_InfoCruceros.UseVisualStyleBackColor = true;
+            this.btn_InfoCruceros.Click += new System.EventHandler(this.btn_InfoCruceros_Click);
             // 
             // btn_VenderCrucero
             // 
@@ -201,6 +207,7 @@ namespace FormMain
             this.btn_Cruceros.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Cruceros.FlatAppearance.BorderSize = 0;
             this.btn_Cruceros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Cruceros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_Cruceros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cruceros.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Cruceros.Location = new System.Drawing.Point(0, 234);
@@ -276,12 +283,14 @@ namespace FormMain
             this.btn_VerViajes.Text = "Ver Viajes";
             this.btn_VerViajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_VerViajes.UseVisualStyleBackColor = true;
+            this.btn_VerViajes.Click += new System.EventHandler(this.btn_VerViajes_Click);
             // 
             // btn_Viajes
             // 
             this.btn_Viajes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Viajes.FlatAppearance.BorderSize = 0;
             this.btn_Viajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Viajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_Viajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Viajes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Viajes.Location = new System.Drawing.Point(0, 100);
@@ -305,13 +314,25 @@ namespace FormMain
             // panelFormulario
             // 
             this.panelFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panelFormulario.Controls.Add(this.pictureBox1);
             this.panelFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormulario.Location = new System.Drawing.Point(200, 0);
             this.panelFormulario.Name = "panelFormulario";
             this.panelFormulario.Size = new System.Drawing.Size(684, 561);
             this.panelFormulario.TabIndex = 7;
             // 
-            // Form2
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(125, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(428, 405);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -319,12 +340,14 @@ namespace FormMain
             this.Controls.Add(this.panelFormulario);
             this.Controls.Add(this.panelSIdeMenu);
             this.MinimumSize = new System.Drawing.Size(900, 600);
-            this.Name = "Form2";
+            this.Name = "FormMain";
             this.Text = "Form2";
             this.panelSIdeMenu.ResumeLayout(false);
             this.panelSubMenuEstadistica.ResumeLayout(false);
             this.panelSubMenuCruceros.ResumeLayout(false);
             this.panelSubMenuViajes.ResumeLayout(false);
+            this.panelFormulario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,5 +370,6 @@ namespace FormMain
         private System.Windows.Forms.Button btn_Cruceros;
         private System.Windows.Forms.Button btn_InfoPasajeros;
         private System.Windows.Forms.Panel panelFormulario;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

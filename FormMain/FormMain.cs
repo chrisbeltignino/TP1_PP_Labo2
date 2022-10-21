@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace FormMain
 {
-    public partial class Form2 : Form
+    public partial class FormMain : Form
     {
-        public Form2()
+        private Form activeForm = null;
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -56,6 +57,58 @@ namespace FormMain
         private void btn_Estadisticas_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSubMenuEstadistica);
+        }
+
+        /*
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panelFormulario.Controls.Add(childForm);
+                panelFormulario.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+            }
+        }
+        */
+
+        private void btn_VerViajes_Click(object sender, EventArgs e)
+        {
+            FormViaje formViaje = new FormViaje();
+
+            //openChildForm(new FormViaje());
+            
+            formViaje.TopLevel = false;
+            formViaje.FormBorderStyle = FormBorderStyle.None;
+            formViaje.Dock = DockStyle.Fill;
+            panelFormulario.Controls.Add(formViaje);
+            panelFormulario.Tag = formViaje;
+            formViaje.BringToFront();
+            formViaje.Show();
+            
+            hideSubMenu();
+        }
+
+        private void btn_InfoCruceros_Click(object sender, EventArgs e)
+        {
+            FormCruceros formCrucero = new FormCruceros();
+
+            //openChildForm(new FormCruceros());
+
+            formCrucero.TopLevel = false;
+            formCrucero.FormBorderStyle = FormBorderStyle.None;
+            formCrucero.Dock = DockStyle.Fill;
+            panelFormulario.Controls.Add(formCrucero);
+            panelFormulario.Tag = formCrucero;
+            formCrucero.BringToFront();
+            formCrucero.Show();
+
+            hideSubMenu();
         }
     }
 }

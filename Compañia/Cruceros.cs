@@ -118,6 +118,29 @@ namespace Compañia
 
             return c;
         }
+
+        public List<Pasajeros> Pasajeros
+        {
+            get
+            {
+                return this.pasajeros;
+            }
+            set
+            {
+                if (this.pasajeros.Count == 0)
+                {
+                    this.pasajeros = value;
+                }
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return this.pasajeros.Count;
+            }
+        }
     }
 
 
