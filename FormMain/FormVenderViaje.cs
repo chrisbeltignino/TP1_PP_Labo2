@@ -20,6 +20,9 @@ namespace FormMain
         private Viajes nuevoViaje = new Viajes();
         private ListadoViajes auxDestino = new ListadoViajes();
 
+        public static FormVenderViaje formVenderViaje = new FormVenderViaje();
+
+
         private const double Iva = 0.21;
 
         public FormVenderViaje()
@@ -181,13 +184,16 @@ namespace FormMain
                 {
                     nuevoPasajero = ValidarPasajero();
                     SettPrecioFinal(nuevoViaje.PrecioPremium);
+                    gpb_Pasajero.Enabled = false;
                     btn_Venta.Enabled = true;
                 }
                 else
                 {
                     nuevoPasajero = ValidarPasajero();
                     SettPrecioFinal(nuevoViaje.PrecioTurista);
+                    gpb_Pasajero.Enabled = false;
                     btn_Venta.Enabled = true;
+                    //btn_Cancelar.Enabled = true;
                 }
             }
             else
@@ -335,7 +341,12 @@ namespace FormMain
                     MessageBox.Show("Venta Realizada");
                     FormMain.viajes += this.nuevoViaje;
                     Cruceros.ActualizarCrucero(this.nuevoViaje.Crucero, FormMain.listaCruceros);
-                    this.Enabled = false;
+                    CrucerosDeLaFlota();
+                    LimpiarGroupBox(gpb_Crucero);
+                    LimpiarGroupBox(gpb_Destino);
+                    LimpiarGroupBox(gpb_Factura);
+                    LimpiarGroupBox(gpb_Pasajero);
+                    btn_Venta.Enabled = false;
                 }
                 else
                 {
@@ -349,27 +360,56 @@ namespace FormMain
                     MessageBox.Show("Venta Realizada");
                     FormMain.viajes += this.nuevoViaje;
                     Cruceros.ActualizarCrucero(this.nuevoViaje.Crucero, FormMain.listaCruceros);
-                    this.Enabled = false;
-                    BorrarTextBox();
+                    CrucerosDeLaFlota();
+                    LimpiarGroupBox(gpb_Crucero);
+                    LimpiarGroupBox(gpb_Destino);
+                    LimpiarGroupBox(gpb_Factura);
+                    LimpiarGroupBox(gpb_Pasajero);
+                    btn_Venta.Enabled = false;
                 }
                 else
                 {
                     MessageBox.Show("Error, no hay camarote disponible");
-                    this.Enabled = false;
-                    BorrarTextBox();
+                    CrucerosDeLaFlota();
+                    LimpiarGroupBox(gpb_Crucero);
+                    LimpiarGroupBox(gpb_Destino);
+                    LimpiarGroupBox(gpb_Factura);
+                    LimpiarGroupBox(gpb_Pasajero);
+                    btn_Venta.Enabled = false;
                 }
             }
         }
 
-        private void BorrarTextBox()
+        private void LimpiarGroupBox(GroupBox gpb)
         {
-            foreach (TextBox item in this.gpb_Pasajero.Controls)
+            foreach (var txt in gpb.Controls)
             {
-                item.Text = " ";
+                if (txt is TextBox)
+                {
+                    ((TextBox)txt).Clear();
+                }
+                else if (txt is ComboBox)
+                {
+                    ((ComboBox)txt).SelectedItem = "";
+                }
             }
-            foreach (ComboBox item in this.gpb_Pasajero.Controls)
+        }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cancelar la Venta?", "Cancelar Venta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                item.SelectedIndex = 0;
+                FormMain.formVenderViaje.Close();
+                /*
+                gpb_Destino.Enabled = true;
+                gpb_Factura.Enabled = false;
+                gpb_Pasajero.Enabled = false;
+                btn_Venta.Enabled = false;
+                LimpiarGroupBox(gpb_Crucero);
+                LimpiarGroupBox(gpb_Destino);
+                LimpiarGroupBox(gpb_Factura);
+                LimpiarGroupBox(gpb_Pasajero);
+                */
             }
         }
     }

@@ -41,7 +41,6 @@ namespace FormMain
             this.btn_VenderCrucero = new System.Windows.Forms.Button();
             this.btn_Cruceros = new System.Windows.Forms.Button();
             this.panelSubMenuViajes = new System.Windows.Forms.Panel();
-            this.btn_InfoPasajeros = new System.Windows.Forms.Button();
             this.btn_CrearViaje = new System.Windows.Forms.Button();
             this.btn_VerViajes = new System.Windows.Forms.Button();
             this.btn_Viajes = new System.Windows.Forms.Button();
@@ -80,7 +79,7 @@ namespace FormMain
             this.panelSubMenuEstadistica.Controls.Add(this.btn_CantPasajeros);
             this.panelSubMenuEstadistica.Controls.Add(this.btn_Recaudacion);
             this.panelSubMenuEstadistica.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuEstadistica.Location = new System.Drawing.Point(0, 379);
+            this.panelSubMenuEstadistica.Location = new System.Drawing.Point(0, 339);
             this.panelSubMenuEstadistica.Name = "panelSubMenuEstadistica";
             this.panelSubMenuEstadistica.Size = new System.Drawing.Size(200, 102);
             this.panelSubMenuEstadistica.TabIndex = 6;
@@ -145,7 +144,7 @@ namespace FormMain
             this.btn_Estadisticas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_Estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Estadisticas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_Estadisticas.Location = new System.Drawing.Point(0, 339);
+            this.btn_Estadisticas.Location = new System.Drawing.Point(0, 299);
             this.btn_Estadisticas.Name = "btn_Estadisticas";
             this.btn_Estadisticas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_Estadisticas.Size = new System.Drawing.Size(200, 40);
@@ -161,7 +160,7 @@ namespace FormMain
             this.panelSubMenuCruceros.Controls.Add(this.btn_InfoCruceros);
             this.panelSubMenuCruceros.Controls.Add(this.btn_VenderCrucero);
             this.panelSubMenuCruceros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuCruceros.Location = new System.Drawing.Point(0, 274);
+            this.panelSubMenuCruceros.Location = new System.Drawing.Point(0, 234);
             this.panelSubMenuCruceros.Name = "panelSubMenuCruceros";
             this.panelSubMenuCruceros.Size = new System.Drawing.Size(200, 65);
             this.panelSubMenuCruceros.TabIndex = 4;
@@ -178,7 +177,7 @@ namespace FormMain
             this.btn_InfoCruceros.Location = new System.Drawing.Point(0, 30);
             this.btn_InfoCruceros.Name = "btn_InfoCruceros";
             this.btn_InfoCruceros.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_InfoCruceros.Size = new System.Drawing.Size(200, 30);
+            this.btn_InfoCruceros.Size = new System.Drawing.Size(200, 32);
             this.btn_InfoCruceros.TabIndex = 3;
             this.btn_InfoCruceros.Text = "Informacion de Cruceros";
             this.btn_InfoCruceros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +210,7 @@ namespace FormMain
             this.btn_Cruceros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_Cruceros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cruceros.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_Cruceros.Location = new System.Drawing.Point(0, 234);
+            this.btn_Cruceros.Location = new System.Drawing.Point(0, 194);
             this.btn_Cruceros.Name = "btn_Cruceros";
             this.btn_Cruceros.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_Cruceros.Size = new System.Drawing.Size(200, 40);
@@ -224,32 +223,14 @@ namespace FormMain
             // panelSubMenuViajes
             // 
             this.panelSubMenuViajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelSubMenuViajes.Controls.Add(this.btn_InfoPasajeros);
             this.panelSubMenuViajes.Controls.Add(this.btn_CrearViaje);
             this.panelSubMenuViajes.Controls.Add(this.btn_VerViajes);
             this.panelSubMenuViajes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuViajes.Location = new System.Drawing.Point(0, 140);
+            this.panelSubMenuViajes.Location = new System.Drawing.Point(0, 131);
             this.panelSubMenuViajes.Name = "panelSubMenuViajes";
-            this.panelSubMenuViajes.Size = new System.Drawing.Size(200, 94);
+            this.panelSubMenuViajes.Size = new System.Drawing.Size(200, 63);
             this.panelSubMenuViajes.TabIndex = 2;
             this.panelSubMenuViajes.Visible = false;
-            // 
-            // btn_InfoPasajeros
-            // 
-            this.btn_InfoPasajeros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_InfoPasajeros.FlatAppearance.BorderSize = 0;
-            this.btn_InfoPasajeros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_InfoPasajeros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btn_InfoPasajeros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_InfoPasajeros.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_InfoPasajeros.Location = new System.Drawing.Point(0, 60);
-            this.btn_InfoPasajeros.Name = "btn_InfoPasajeros";
-            this.btn_InfoPasajeros.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_InfoPasajeros.Size = new System.Drawing.Size(200, 30);
-            this.btn_InfoPasajeros.TabIndex = 4;
-            this.btn_InfoPasajeros.Text = "Informacion de Pasajeros";
-            this.btn_InfoPasajeros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_InfoPasajeros.UseVisualStyleBackColor = true;
             // 
             // btn_CrearViaje
             // 
@@ -295,7 +276,7 @@ namespace FormMain
             this.btn_Viajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_Viajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Viajes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_Viajes.Location = new System.Drawing.Point(0, 100);
+            this.btn_Viajes.Location = new System.Drawing.Point(0, 91);
             this.btn_Viajes.Name = "btn_Viajes";
             this.btn_Viajes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_Viajes.Size = new System.Drawing.Size(200, 40);
@@ -310,7 +291,7 @@ namespace FormMain
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 100);
+            this.panelLogo.Size = new System.Drawing.Size(200, 91);
             this.panelLogo.TabIndex = 0;
             // 
             // panelFormulario
@@ -372,7 +353,6 @@ namespace FormMain
         private System.Windows.Forms.Button btn_InfoCruceros;
         private System.Windows.Forms.Button btn_VenderCrucero;
         private System.Windows.Forms.Button btn_Cruceros;
-        private System.Windows.Forms.Button btn_InfoPasajeros;
         private System.Windows.Forms.Panel panelFormulario;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

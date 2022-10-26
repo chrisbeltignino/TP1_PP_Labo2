@@ -140,6 +140,18 @@ namespace FormMain
             }
         }
 
+        private void VaciarDatos()
+        {
+            foreach (TextBox item in gpb_Crucero.Controls)
+            {
+                item.Text = " ";
+            }
+            foreach (ComboBox item in gpb_Crucero.Controls)
+            {
+                item.SelectedIndex = 0;
+            }
+        }
+
         private void btn_AgregarCrucero_Click(object sender, EventArgs e)
         {
             Viajes nuevoViaje = new Viajes();
@@ -156,8 +168,6 @@ namespace FormMain
                 string auxNombre = txt_Nombre.Text;
                 string auxMatricula = txt_Matricula.Text;
                 double auxBodega = Convert.ToDouble(txt_Bodega.Text);
-                int auxCamarotesPremium;
-                int auxCamarotesTurista;
                 int auxTotalCamarotes = Convert.ToInt32(txt_TotalCamarotes.Text);
                 int auxRestaurantes = Convert.ToInt32(txt_Restaurante.Text);
                 int auxPiscinas = Convert.ToInt32(txt_Piscinas.Text);
@@ -169,8 +179,6 @@ namespace FormMain
                 auxCrucero.Nombre = auxNombre;
                 auxCrucero.Matricula = auxMatricula;
                 auxCrucero.Camarotes = auxTotalCamarotes;
-                auxCamarotesPremium = nuevoViaje.CamarotesPremium;
-                auxCamarotesTurista = nuevoViaje.CamarotesTurista;
                 auxCrucero.Bodega = auxBodega;
                 auxCrucero.SalonesDelCrucero.Casinos = auxCasinos;
                 auxCrucero.SalonesDelCrucero.Comedores = auxRestaurantes;
@@ -178,9 +186,6 @@ namespace FormMain
                 auxCrucero.SalonesDelCrucero.SalonesBaile = auxSalonesBaile;
 
                 nuevoViaje.FechaPartida = dateTimePicker1.Value;
-
-                txt_CamPremium.Text = Convert.ToString(auxCamarotesPremium);
-                txt_CamTurista.Text = Convert.ToString(auxCamarotesTurista);
 
                 isOk = true;
             }
@@ -192,10 +197,11 @@ namespace FormMain
 
             if (isOk == true)
             {
-                gpb_Crucero.Enabled = false;
+                VaciarDatos();
                 FormMain.listaCruceros.Add(auxCrucero);
                 FormMain.viajes += nuevoViaje;
                 this.listaCrucero = FormMain.listaCruceros;
+                CrucerosDeLaFlota();
             }
         }
     }

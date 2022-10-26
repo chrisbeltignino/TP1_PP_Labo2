@@ -163,7 +163,7 @@ namespace FormMain
             // 
             this.cmb_ProxViaje.Enabled = false;
             this.cmb_ProxViaje.FormattingEnabled = true;
-            this.cmb_ProxViaje.Location = new System.Drawing.Point(504, 162);
+            this.cmb_ProxViaje.Location = new System.Drawing.Point(512, 167);
             this.cmb_ProxViaje.Name = "cmb_ProxViaje";
             this.cmb_ProxViaje.Size = new System.Drawing.Size(143, 28);
             this.cmb_ProxViaje.TabIndex = 33;
@@ -257,7 +257,7 @@ namespace FormMain
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(520, 129);
+            this.label13.Location = new System.Drawing.Point(528, 134);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(110, 20);
             this.label13.TabIndex = 18;

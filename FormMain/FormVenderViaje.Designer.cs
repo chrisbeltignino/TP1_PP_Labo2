@@ -159,7 +159,8 @@ namespace FormMain
             this.gpb_Pasajero.Size = new System.Drawing.Size(668, 353);
             this.gpb_Pasajero.TabIndex = 1;
             this.gpb_Pasajero.TabStop = false;
-            this.gpb_Pasajero.Text = "Datos Pasajero";            // 
+            this.gpb_Pasajero.Text = "Datos Pasajero";
+            // 
             // cmb_Clase
             // 
             this.cmb_Clase.FormattingEnabled = true;
@@ -685,6 +686,7 @@ namespace FormMain
             this.btn_Cancelar.TabIndex = 26;
             this.btn_Cancelar.Text = "Cancelar Venta";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // panelFormulario
             // 

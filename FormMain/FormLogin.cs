@@ -26,11 +26,13 @@ namespace FormMain
             Usuario usuario1 = new Usuario("christignino", "100727");
             Usuario usuario2 = new Usuario("robert", "01234");
             Usuario usuario3 = new Usuario("guardian", "espectro");
+            Usuario usuario4 = new Usuario("c", "c");
 
             usuarioExistente = new IngresoUsuario();
             usuarioExistente += usuario1;
             usuarioExistente += usuario2;
             usuarioExistente += usuario3;
+            usuarioExistente += usuario4;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)

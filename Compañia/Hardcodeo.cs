@@ -26,19 +26,19 @@ namespace Compañia
 
             Pasaporte pasaporteUno = new Pasaporte("ANJ234JK", "Argentina", Sexo.Masculino);
             Equipajes equipajeUno = new Equipajes(true, 50, 2);
-            Pasajeros pasajeroUno = new Pasajeros("Peter", "Marquer", 45, 30373847, true, pasaporteUno, equipajeUno);
+            Pasajeros pasajeroUno = new Pasajeros("Martin", "Rodriguez", 45, 30373847, true, pasaporteUno, equipajeUno);
 
             Pasaporte pasaporteDos = new Pasaporte("JNK34244K2", "Uruguay", Sexo.Otro);
             Equipajes equipajeDos = new Equipajes(true, 20, 1);
-            Pasajeros pasajeroDos = new Pasajeros("Pi", "Noun", 27, 37457634, false, pasaporteDos, equipajeDos);
+            Pasajeros pasajeroDos = new Pasajeros("Alex", "Canigia", 27, 37457634, false, pasaporteDos, equipajeDos);
 
             Pasaporte pasaporteTres = new Pasaporte("GVJH334K3LL", "Otra", Sexo.Femenino);
             Equipajes equipajeTres = new Equipajes(false, 25, 1);
-            Pasajeros pasajeroTres = new Pasajeros("Xiau", "Lang", 20, 41383849, false, pasaporteTres, equipajeTres);
+            Pasajeros pasajeroTres = new Pasajeros("Anya", "Serlova", 20, 41383849, false, pasaporteTres, equipajeTres);
 
-            Pasaporte pasaporteCuatro = new Pasaporte("Chile", "JK234JJN4", Sexo.Masculino);
+            Pasaporte pasaporteCuatro = new Pasaporte("JK234JJN4", "Chile", Sexo.Masculino);
             Equipajes equipajeCuatro = new Equipajes(false, 50, 2);
-            Pasajeros pasajeroCuatro = new Pasajeros("Pedro", "Martinez", 55, 19435829, true, pasaporteCuatro, equipajeCuatro);
+            Pasajeros pasajeroCuatro = new Pasajeros("Gabi", "Rodriguez", 55, 19435829, true, pasaporteCuatro, equipajeCuatro);
 
             pasajerosListaUno.Add(pasajeroUno);
             pasajerosListaUno.Add(pasajeroDos);
@@ -51,7 +51,7 @@ namespace Compañia
         public static Cruceros CruceroHardcode()
         {
             Salones s1 = new Salones();
-            Cruceros cruceroUno = new Cruceros("RXZ090", "VIAJERO ERRANTE", 5000, 10000, s1);
+            Cruceros cruceroUno = new Cruceros("EV-1000", "EL VIAJERO", 500, 5000, s1);
             cruceroUno.Pasajeros = PasajerosHardcode();
 
             return cruceroUno;
@@ -181,25 +181,25 @@ namespace Compañia
             List<Cruceros> flotaJ = new List<Cruceros>();
 
             Salones s1 = new Salones(5, 10, 5, 10);
-            Cruceros cruceroUno = new Cruceros("RX-305043", "GOD OF SEA", 10000, 25000, s1);
+            Cruceros cruceroUno = new Cruceros("HW-0075", "HAWKMOON", 20000, 35000, s1);
 
             Salones s2 = new Salones(1, 3, 1, 4);
-            Cruceros cruceroDos = new Cruceros("MZ-2T45", "SUN RISE", 4000, 17000, s2);
+            Cruceros cruceroDos = new Cruceros("LG-0000", "THE LIGTH", 2000, 11000, s2);
 
             Salones s3 = new Salones(1, 2, 3, 5);
-            Cruceros cruceroTres = new Cruceros("PRT-0000", "KING OF SEA PARTY", 3000, 12000, s3);
+            Cruceros cruceroTres = new Cruceros("BS-0004", "BANSHE-04", 30, 120, s3);
 
             Salones s4 = new Salones(0, 2, 1, 3);
-            Cruceros cruceroCuatro = new Cruceros("KX-98Z8", "CHILL VIBES", 3000, 12000, s4);
+            Cruceros cruceroCuatro = new Cruceros("CZ-0001", "CAPITAN ZAVALA", 6000, 16000, s4);
 
             Salones s5 = new Salones(1, 2, 0, 3);
-            Cruceros cruceroCinco = new Cruceros("DLW-012IT", "DEAL WITH IT", 3200, 12000, s5);
+            Cruceros cruceroCinco = new Cruceros("CM-X000", "BIG J", 1200, 12000, s5);
 
             Salones s6 = new Salones(1, 1, 1, 2);
-            Cruceros cruceroSeis = new Cruceros("LTT-123L", "LITTLE PARADISE", 1500, 5000, s6);
+            Cruceros cruceroSeis = new Cruceros("IB-4505", "IRON BANNER", 150, 2000, s6);
 
             Salones s7 = new Salones(5, 15, 6, 15);
-            Cruceros cruceroSiete = new Cruceros("CXM-666", "COSMOXS-0", 20000, 45000, s7);
+            Cruceros cruceroSiete = new Cruceros("DL-T007", "DELTA-007", 10000, 25000, s7);
 
             flotaJ.Add(cruceroUno);
             flotaJ.Add(cruceroDos);
