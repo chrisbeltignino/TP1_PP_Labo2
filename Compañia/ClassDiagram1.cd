@@ -1,2 +1,156 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Compañia.Persona">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAQAAACEgAAAgAAAAAEAAoAAAAIAAAAAAiA=</HashCode>
+      <FileName>Persona.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Compañia.Pasajeros">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAQAAAAEgAAAAAAAAAIAAIACAAEAAAABAiA=</HashCode>
+      <FileName>Pasajeros.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Pasaporte" />
+      <Property Name="Equipaje" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Compañia.Equipajes">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAQAAAAEAAAYQAAAEAAAAgAAAAAAAAAAAQA=</HashCode>
+      <FileName>Equipajes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Compañia.Pasaporte">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQSAAAAEgAAAACAAAAAgCIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Pasaporte.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="eSexo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Compañia.Cruceros">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="SalonesDelCrucero" Type="Compañia.Salones" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="0.75" />
+        <Point X="7.5" Y="0.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAwhAAAMCAAAACiwAEAgAQAAgAAAIQCAAAEAAABAiA=</HashCode>
+      <FileName>Cruceros.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SalonesDelCrucero" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Pasajeros" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Compañia.Salones" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAIAACACAAABAAAAAQAAAEAAAABAAA=</HashCode>
+      <FileName>Salones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Compañia.Viajes">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgACUAAAYJQAAAAEgAACQAABCAAAAZAAAQgQggEKAiI=</HashCode>
+      <FileName>Viajes.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Crucero" />
+      <Property Name="CiudadesPartida" />
+      <Property Name="Destino" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Compañia.Destino">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ggAAAAAAAAAAAAAAgAAEAAAAAAAAAJAAAAAAAAAAAiI=</HashCode>
+      <FileName>Destino.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EnumDestino" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Compañia.ListadoViajes">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAUSAAhADwgQgAAQABAAAAIEACAAQAAABAiA=</HashCode>
+      <FileName>ListadoViajes.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="listaViajes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Compañia.Premium" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Premium.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Compañia.Turista" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Turista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="eDestinos" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAERgAAAAAAAAAAAAAKAAACAAwIBIIAEAAABBAAAQQ=</HashCode>
+      <FileName>eDestinos.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="eCiudadesPartida" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>eDestinos.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Sexo" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgBAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Sexo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
