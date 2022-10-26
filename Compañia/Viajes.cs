@@ -27,7 +27,7 @@ namespace Compañia
             this.camarotesPremium = 0;
             this.precioTurista = 0;
             this.precioPremium = 0;
-            this.destino = null;
+            this.destino = new Destino();
         }
 
         public eCiudadesPartida CiudadesPartida
@@ -246,6 +246,36 @@ namespace Compañia
             disponible = (v.camarotesPremium > 0 || v.camarotesTurista > 0) && (dtV > dtNow);
 
             return disponible;
+        }
+
+        public bool ConfirmarVenta(Pasajeros p)
+        {
+            bool confirm = false;
+            int camarotes;
+            if (p.EsPremium)
+            {
+                camarotes = this.camarotesPremium;
+                camarotes--;
+                if (camarotes >= 0)
+                {
+                    this.camarotesPremium--;
+                    confirm = true;
+                }
+            }
+            else
+            {
+                if (!p.EsPremium)
+                {
+                    camarotes = this.camarotesTurista;
+                    camarotes--;
+                    if (camarotes >= 0)
+                    {
+                        this.camarotesTurista--;
+                        confirm = true;
+                    }
+                }
+            }
+            return confirm;
         }
     }
 }

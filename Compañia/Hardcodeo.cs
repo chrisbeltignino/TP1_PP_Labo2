@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Compañia
 {
-    class Hardcodeo
+    public static class Hardcodeo
     {
         public static Viajes ViajeUnoHardcode()
         {
@@ -24,21 +24,21 @@ namespace Compañia
         {
             List<Pasajeros> pasajerosListaUno = new List<Pasajeros>();
 
-            Pasaporte passUno = new Pasaporte(34657890, "Argentina", "AAA900595", Sexo.Masculino);
+            Pasaporte pasaporteUno = new Pasaporte("ANJ234JK", "Argentina", Sexo.Masculino);
             Equipajes equipajeUno = new Equipajes(true, 50, 2);
-            Pasajeros pasajeroUno = new PasajeroPremium("Peter", "Marquer", 45, passUno, equipajeUno);
+            Pasajeros pasajeroUno = new Pasajeros("Peter", "Marquer", 45, 30373847, true, pasaporteUno, equipajeUno);
 
-            Pasaporte passDos = new Pasaporte(23456723, "Uruguay", "URU000022", Sexo.Otro);
+            Pasaporte pasaporteDos = new Pasaporte("JNK34244K2", "Uruguay", Sexo.Otro);
             Equipajes equipajeDos = new Equipajes(true, 20, 1);
-            Pasajeros pasajeroDos = new PasajeroTurista("Pi", "Noun", 27, passDos, equipajeDos);
+            Pasajeros pasajeroDos = new Pasajeros("Pi", "Noun", 27, 37457634, false, pasaporteDos, equipajeDos);
 
-            Pasaporte passTres = new Pasaporte(47890544, "Otra", "CHI014000", Sexo.Femenino);
+            Pasaporte pasaporteTres = new Pasaporte("GVJH334K3LL", "Otra", Sexo.Femenino);
             Equipajes equipajeTres = new Equipajes(false, 25, 1);
-            Pasajeros pasajeroTres = new PasajeroTurista("Xiau", "Lang", 20, passTres, equipajeTres);
+            Pasajeros pasajeroTres = new Pasajeros("Xiau", "Lang", 20, 41383849, false, pasaporteTres, equipajeTres);
 
-            Pasaporte passCuatro = new Pasaporte(45456766, "Chile", "CHH030401", Sexo.Masculino);
+            Pasaporte pasaporteCuatro = new Pasaporte("Chile", "JK234JJN4", Sexo.Masculino);
             Equipajes equipajeCuatro = new Equipajes(false, 50, 2);
-            Pasajeros pasajeroCuatro = new PasajeroPremium("Pedro", "Martinez", 55, passCuatro, equipajeCuatro);
+            Pasajeros pasajeroCuatro = new Pasajeros("Pedro", "Martinez", 55, 19435829, true, pasaporteCuatro, equipajeCuatro);
 
             pasajerosListaUno.Add(pasajeroUno);
             pasajerosListaUno.Add(pasajeroDos);
@@ -57,9 +57,9 @@ namespace Compañia
             return cruceroUno;
         }
 
-        public static ListaDeViajes ListaDeViajesHardcode()
+        public static ListadoViajes ListaDeViajesHardcode()
         {
-            ListaDeViajes newList = new ListaDeViajes();
+            ListadoViajes newList = new ListadoViajes();
 
             List<Cruceros> flotaJ = new List<Cruceros>();
             flotaJ = ListaCrucerosHardcode();
@@ -114,9 +114,9 @@ namespace Compañia
             return newList;
         }
 
-        public static ListaDeViajes ListaDeViajesAntiguosHardcode()
+        public static ListadoViajes ListaDeViajesAntiguosHardcode()
         {
-            ListaDeViajes newList = new ListaDeViajes();
+            ListadoViajes newList = new ListadoViajes();
 
             List<Cruceros> flotaJ = new List<Cruceros>();
             flotaJ = ListaCrucerosHardcode();

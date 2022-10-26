@@ -198,9 +198,10 @@ namespace FormMain
             this.btn_VenderCrucero.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btn_VenderCrucero.Size = new System.Drawing.Size(200, 30);
             this.btn_VenderCrucero.TabIndex = 2;
-            this.btn_VenderCrucero.Text = "Vender Crucero";
+            this.btn_VenderCrucero.Text = "Crear Crucero";
             this.btn_VenderCrucero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_VenderCrucero.UseVisualStyleBackColor = true;
+            this.btn_VenderCrucero.Click += new System.EventHandler(this.btn_VenderCrucero_Click);
             // 
             // btn_Cruceros
             // 
@@ -263,9 +264,10 @@ namespace FormMain
             this.btn_CrearViaje.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btn_CrearViaje.Size = new System.Drawing.Size(200, 30);
             this.btn_CrearViaje.TabIndex = 3;
-            this.btn_CrearViaje.Text = "Crear Viaje";
+            this.btn_CrearViaje.Text = "Vender Viaje";
             this.btn_CrearViaje.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_CrearViaje.UseVisualStyleBackColor = true;
+            this.btn_CrearViaje.Click += new System.EventHandler(this.btn_CrearViaje_Click);
             // 
             // btn_VerViajes
             // 
@@ -318,14 +320,14 @@ namespace FormMain
             this.panelFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormulario.Location = new System.Drawing.Point(200, 0);
             this.panelFormulario.Name = "panelFormulario";
-            this.panelFormulario.Size = new System.Drawing.Size(684, 561);
+            this.panelFormulario.Size = new System.Drawing.Size(1101, 561);
             this.panelFormulario.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(125, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(333, 76);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(428, 405);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -336,12 +338,14 @@ namespace FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(1301, 561);
             this.Controls.Add(this.panelFormulario);
             this.Controls.Add(this.panelSIdeMenu);
+            this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "FormMain";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelSIdeMenu.ResumeLayout(false);
             this.panelSubMenuEstadistica.ResumeLayout(false);
             this.panelSubMenuCruceros.ResumeLayout(false);

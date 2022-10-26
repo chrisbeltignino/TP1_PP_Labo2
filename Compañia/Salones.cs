@@ -37,6 +37,51 @@ namespace Compañia
         {
             this.comedores = comedores;
         }
+
+        public int Comedores
+        {
+            get
+            {
+                return this.comedores;
+            }
+            set
+            {
+                this.comedores = value;
+            }
+        }
+        public int Casinos
+        {
+            get
+            {
+                return this.casinos;
+            }
+            set
+            {
+                this.casinos = value;
+            }
+        }
+        public int Piscinas
+        {
+            get
+            {
+                return this.piscinas;
+            }
+            set
+            {
+                this.piscinas = value;
+            }
+        }
+        public int SalonesBaile
+        {
+            get
+            {
+                return this.salonBaile;
+            }
+            set
+            {
+                this.salonBaile = value;
+            }
+        }
         /*
         private string Mostrar()
         {

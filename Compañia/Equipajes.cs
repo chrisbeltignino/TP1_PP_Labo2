@@ -12,6 +12,8 @@ namespace Compañia
         private int cantValijas;
         private double pesoTotal;
 
+        public Equipajes() : this(false, -1, -1) { }
+
         public Equipajes(bool bolsoMano, int cantValijas, float pesoTotal)
         {
             this.bolsoMano = bolsoMano;
@@ -29,6 +31,37 @@ namespace Compañia
                     bolso = "Si";
                 }
                 return bolso;
+            }
+        }
+
+        public bool BolsoMano
+        {
+            set
+            {
+                this.bolsoMano = value;
+            }
+        }
+        public double KgValija
+        {
+            get
+            {
+                return this.pesoTotal;
+            }
+            set
+            {
+                this.pesoTotal = value;
+            }
+        }
+
+        public int CountValijas
+        {
+            get
+            {
+                return this.cantValijas;
+            }
+            set
+            {
+                this.cantValijas = value;
             }
         }
 

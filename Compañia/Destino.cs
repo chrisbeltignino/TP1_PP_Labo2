@@ -11,6 +11,12 @@ namespace Compañia
         private eDestinos destino;
         private bool regional;
 
+        public Destino()
+        {
+            this.destino = eDestinos.NoSeleccionado;
+            this.regional = true;
+        }
+
         public Destino(eDestinos destino, bool esRegional)
         {
             this.destino = destino;
@@ -30,6 +36,21 @@ namespace Compañia
         public static bool operator !=(Destino d1, Destino d2)
         {
             return !(d1 == d2);
+        }
+
+        public static bool operator ==(Destino d, eDestinos ds)
+        {
+            bool equals = false;
+            if (!(d is null))
+            {
+                equals = d.EnumDestino == ds;
+            }
+
+            return equals;
+        }
+        public static bool operator !=(Destino d, eDestinos ds)
+        {
+            return !(d == ds);
         }
 
         public override bool Equals(object obj)
@@ -52,7 +73,15 @@ namespace Compañia
             get
             {
                 string destino = this.destino.ToString();
-                return destino.Replace("_", " ");
+                return destino;
+            }
+        }
+
+        public eDestinos EnumDestino
+        {
+            get
+            {
+                return this.destino;
             }
         }
 

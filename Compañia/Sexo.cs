@@ -1,1 +1,1 @@
-﻿public enum Sexo { Femenino, Masculino, Otro}
+﻿public enum Sexo { Femenino, Masculino, Otro, Vacio}

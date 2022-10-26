@@ -13,45 +13,50 @@ namespace FormMain
 {
     public partial class FormViaje : Form
     {
+        public ListadoViajes listadoViajes;
+        public List<Viajes> viajes;
+
         public FormViaje()
         {
             InitializeComponent();
         }
 
-        private void btn_Cerrar_Click(object sender, EventArgs e)
+        public FormViaje(List<Viajes> viajes) : this()
         {
-            this.Close();
+            this.viajes = viajes;
         }
 
-        private void DataGridViajes(Viajes viajeAaux)
+        private void DataGridViajes(Viajes viajeAux)
         {
             DataGridViewRow filaUno = new DataGridViewRow();
 
             filaUno.CreateCells(this.dgv_Viajes);
-
-            filaUno.Cells[0].Value = viajeAaux.Destino.DestinoSeleccionado;
-            filaUno.Cells[1].Value = viajeAaux.FechaPartida.ToString("dd/MM/yyyy");
-            filaUno.Cells[2].Value = viajeAaux.Crucero.Matricula;
-            filaUno.Cells[3].Value = viajeAaux.CamarotesTurista.ToString();
-            filaUno.Cells[4].Value = viajeAaux.CamarotesPremium.ToString();
-            filaUno.Cells[5].Value = $"${viajeAaux.PrecioTurista.ToString()}";
-            filaUno.Cells[6].Value = $"${viajeAaux.PrecioPremium.ToString()}";
-
-
-            if (viajeAaux.ViajeDisponible(viajeAaux))
+            
+            if (viajeAux.ViajeDisponible(viajeAux))
             {
-                filaUno.Cells[7].Value = $"SI";
+                filaUno.Cells[0].Value = $"SI";
             }
             else
             {
-                filaUno.Cells[7].Value = $"NO";
+                filaUno.Cells[0].Value = $"NO";
             }
-
+            filaUno.Cells[1].Value = viajeAux.FechaPartida.ToString("dd/MM/yyyy");
+            filaUno.Cells[2].Value = $"{viajeAux.Crucero.Matricula}";
+            filaUno.Cells[3].Value = viajeAux.CamarotesTurista.ToString();
+            filaUno.Cells[4].Value = viajeAux.CamarotesPremium.ToString();
+            filaUno.Cells[5].Value = viajeAux.Destino.DestinoSeleccionado;
+            
             this.dgv_Viajes.Rows.Add(filaUno);
         }
 
-        private void FrmViaje_Load(object sender, EventArgs e)
+        private void FormViaje_Load(object sender, EventArgs e)
         {
+            this.listadoViajes = new ListadoViajes();
+            this.listadoViajes = FormMain.viajes;
+            foreach (Viajes item in this.listadoViajes.Lista)
+            {
+                DataGridViajes(item);
+            }
             
         }
     }

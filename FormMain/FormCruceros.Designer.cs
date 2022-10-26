@@ -29,54 +29,203 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCruceros));
-            this.btn_Cerrar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgv_Cruceros = new System.Windows.Forms.DataGridView();
+            this.dataNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCamarotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataBodega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataRestaurants = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCasinos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataPiscinas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataSalonesBaile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataPasajeros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCamarotesPremiums = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCamarotesTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Cruceros)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Cerrar
+            // panel1
             // 
-            this.btn_Cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btn_Cerrar.FlatAppearance.BorderSize = 0;
-            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cerrar.Image")));
-            this.btn_Cerrar.Location = new System.Drawing.Point(627, 12);
-            this.btn_Cerrar.Name = "btn_Cerrar";
-            this.btn_Cerrar.Size = new System.Drawing.Size(45, 43);
-            this.btn_Cerrar.TabIndex = 2;
-            this.btn_Cerrar.UseVisualStyleBackColor = false;
-            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            this.panel1.Controls.Add(this.dgv_Cruceros);
+            this.panel1.Location = new System.Drawing.Point(25, 74);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1048, 447);
+            this.panel1.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgv_Cruceros
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(617, 400);
-            this.dataGridView1.TabIndex = 3;
+            this.dgv_Cruceros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Cruceros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgv_Cruceros.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgv_Cruceros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Cruceros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgv_Cruceros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Cruceros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Cruceros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Cruceros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataNombre,
+            this.dataMatricula,
+            this.dataCamarotes,
+            this.dataBodega,
+            this.dataRestaurants,
+            this.dataCasinos,
+            this.dataPiscinas,
+            this.dataSalonesBaile,
+            this.dataPasajeros,
+            this.dataCamarotesPremiums,
+            this.dataCamarotesTurista,
+            this.dataViaje,
+            this.dataEstado});
+            this.dgv_Cruceros.Cursor = System.Windows.Forms.Cursors.VSplit;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Cruceros.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Cruceros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Cruceros.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dgv_Cruceros.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Cruceros.Name = "dgv_Cruceros";
+            this.dgv_Cruceros.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(53)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Cruceros.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Cruceros.RowTemplate.Height = 25;
+            this.dgv_Cruceros.Size = new System.Drawing.Size(1048, 447);
+            this.dgv_Cruceros.TabIndex = 5;
+            // 
+            // dataNombre
+            // 
+            this.dataNombre.HeaderText = "Nombre";
+            this.dataNombre.Name = "dataNombre";
+            this.dataNombre.ReadOnly = true;
+            // 
+            // dataMatricula
+            // 
+            this.dataMatricula.HeaderText = "Matricula";
+            this.dataMatricula.Name = "dataMatricula";
+            this.dataMatricula.ReadOnly = true;
+            // 
+            // dataCamarotes
+            // 
+            this.dataCamarotes.HeaderText = "Camarotes";
+            this.dataCamarotes.Name = "dataCamarotes";
+            this.dataCamarotes.ReadOnly = true;
+            // 
+            // dataBodega
+            // 
+            this.dataBodega.HeaderText = "Bodega";
+            this.dataBodega.Name = "dataBodega";
+            this.dataBodega.ReadOnly = true;
+            // 
+            // dataRestaurants
+            // 
+            this.dataRestaurants.HeaderText = "Restaurants";
+            this.dataRestaurants.Name = "dataRestaurants";
+            this.dataRestaurants.ReadOnly = true;
+            // 
+            // dataCasinos
+            // 
+            this.dataCasinos.HeaderText = "Casinos";
+            this.dataCasinos.Name = "dataCasinos";
+            this.dataCasinos.ReadOnly = true;
+            // 
+            // dataPiscinas
+            // 
+            this.dataPiscinas.HeaderText = "Piscinas";
+            this.dataPiscinas.Name = "dataPiscinas";
+            this.dataPiscinas.ReadOnly = true;
+            // 
+            // dataSalonesBaile
+            // 
+            this.dataSalonesBaile.HeaderText = "Salones de Baile";
+            this.dataSalonesBaile.Name = "dataSalonesBaile";
+            this.dataSalonesBaile.ReadOnly = true;
+            // 
+            // dataPasajeros
+            // 
+            this.dataPasajeros.HeaderText = "Pasajeros";
+            this.dataPasajeros.Name = "dataPasajeros";
+            this.dataPasajeros.ReadOnly = true;
+            // 
+            // dataCamarotesPremiums
+            // 
+            this.dataCamarotesPremiums.HeaderText = "Camarotes Premiums";
+            this.dataCamarotesPremiums.Name = "dataCamarotesPremiums";
+            this.dataCamarotesPremiums.ReadOnly = true;
+            // 
+            // dataCamarotesTurista
+            // 
+            this.dataCamarotesTurista.HeaderText = "Camarotes Turista";
+            this.dataCamarotesTurista.Name = "dataCamarotesTurista";
+            this.dataCamarotesTurista.ReadOnly = true;
+            // 
+            // dataViaje
+            // 
+            this.dataViaje.HeaderText = "Proximo Viaje";
+            this.dataViaje.Name = "dataViaje";
+            this.dataViaje.ReadOnly = true;
+            // 
+            // dataEstado
+            // 
+            this.dataEstado.HeaderText = "Estado";
+            this.dataEstado.Name = "dataEstado";
+            this.dataEstado.ReadOnly = true;
             // 
             // FormCruceros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(684, 561);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_Cerrar);
+            this.ClientSize = new System.Drawing.Size(1101, 561);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCruceros";
             this.Text = "FormCruceros";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormCruceros_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Cruceros)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Cerrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCamarotesPremiums;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCamarotesTurista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataViaje;
+        private System.Windows.Forms.DataGridView dgv_Cruceros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataMatricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCamarotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataBodega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataRestaurants;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCasinos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataPiscinas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataSalonesBaile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataPasajeros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataEstado;
     }
 }

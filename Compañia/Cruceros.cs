@@ -15,7 +15,7 @@ namespace Compañia
         private Salones salones;
         private List<Pasajeros> pasajeros;
 
-        private Cruceros()
+        public Cruceros()
         {
             this.pasajeros = new List<Pasajeros>();
         }
@@ -45,6 +45,10 @@ namespace Compañia
             {
                 return this.matricula;
             }
+            set
+            {
+                this.matricula = value;
+            }
         }
 
         public string Nombre
@@ -52,6 +56,46 @@ namespace Compañia
             get
             {
                 return this.nombre;
+            }
+            set
+            {
+                this.nombre = value;
+            }
+        }
+
+        public Salones SalonesDelCrucero
+        {
+            get
+            {
+                return this.salones;
+            }
+            set
+            {
+                this.salones = value;
+            }
+        }
+
+        public int Camarotes
+        {
+            get
+            {
+                return (int)this;
+            }
+            set
+            {
+                this.camarotes = value;
+            }
+        }
+
+        public double Bodega
+        {
+            get
+            {
+                return (double)this;
+            }
+            set
+            {
+                this.bodega = value;
             }
         }
 
@@ -140,6 +184,76 @@ namespace Compañia
             {
                 return this.pasajeros.Count;
             }
+        }
+
+        public static int PasajeroMasFrecuente(Pasajeros p, Cruceros c)
+        {
+            int count;
+            bool flag = true;
+            int max = 0;
+            int i = 0;
+            foreach (Pasajeros item in c.Pasajeros)
+            {
+                count = 0;
+                if (p == c.Pasajeros[i])
+                {
+                    count++;
+                }
+                if (flag || count > max)
+                {
+                    flag = false;
+                    max = count;
+                }
+
+                i++;
+            }
+
+            return max;
+        }
+
+        public static Cruceros ObtenerCrucero(string nombre, List<Cruceros> list)
+        {
+            Cruceros aux = new Cruceros();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].Nombre == nombre)
+                {
+                    aux = list[i];
+                    break;
+                }
+            }
+            return aux;
+        }
+
+        public Pasajeros BuscarPasajeroDni(int dni)
+        {
+            Pasajeros aux = null;
+            foreach (Pasajeros item in this.pasajeros)
+            {
+                if (item.DNI == dni)
+                {
+                    aux = item;
+                    break;
+                }
+            }
+            return aux;
+        }
+
+        public static bool ActualizarCrucero(Cruceros crucero, List<Cruceros> list)
+        {
+            bool isOk = false;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (crucero == list[i])
+                {
+                    list[i] = crucero;
+                    isOk = true;
+                    break;
+                }
+            }
+
+            return isOk;
         }
     }
 

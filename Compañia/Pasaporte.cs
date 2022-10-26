@@ -10,17 +10,39 @@ namespace Compañia
     {
         private string numPasaporte;
         private string nacionalidad;
-        private int dni;
         private Sexo sexo;
-        private DateTime vencimiento;
 
-        public Pasaporte(string numPasaporte, string nacionalidad, int dni, Sexo sexo, DateTime vencimiento)
+        public Pasaporte() : this(" ", " ", global::Sexo.Vacio) { }
+
+        public Pasaporte(string numPasaporte, string nacionalidad, Sexo sexo)
         {
             this.numPasaporte = numPasaporte;
             this.nacionalidad = nacionalidad;
-            this.dni = dni;
-            this.sexo = sexo;
-            this.vencimiento = vencimiento;
+            this.sexo = sexo;        
+        }
+
+        public string Nacionalidad
+        {
+            get
+            {
+                return this.nacionalidad;
+            }
+            set
+            {
+                this.nacionalidad = value;
+            }
+        }
+
+        public string NumeroPasaporte
+        {
+            get
+            {
+                return this.numPasaporte;
+            }
+            set
+            {
+                this.numPasaporte = value;
+            }
         }
 
         public string Sexo
@@ -29,13 +51,35 @@ namespace Compañia
             {
                 return this.sexo.ToString();
             }
+            set
+            {
+                if (!(string.IsNullOrEmpty(value)))
+                {
+                    switch (value)
+                    {
+                        case "NoBinario":
+                            this.eSexo = global::Sexo.Otro;
+                        break;
+                        case "Masculino":
+                            this.eSexo = global::Sexo.Masculino;
+                        break;
+                        case "Femenino":
+                            this.eSexo = global::Sexo.Femenino;
+                        break;
+                    }
+                }
+            }
         }
 
-        public int Dni
+        public Sexo eSexo
         {
             get
             {
-                return this.dni;
+                return this.sexo;
+            }
+            set
+            {
+                this.sexo = value;
             }
         }
 
@@ -59,10 +103,8 @@ namespace Compañia
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Pasaporte: \n" +
                           $"Numero {this.numPasaporte} \n" +
-                          $"DNI {this.dni} \n" +
                           $"Nacionalidad {this.nacionalidad} \n" +
-                          $"Sexo {this.sexo} \n" +
-                          $"Fecha Venc: {this.vencimiento}");
+                          $"Sexo {this.sexo}");
 
             return sb.ToString();
         }

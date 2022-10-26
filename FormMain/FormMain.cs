@@ -7,11 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Compañia;
 
 namespace FormMain
 {
     public partial class FormMain : Form
     {
+        public static ListadoViajes viajes = new ListadoViajes();
+        public static List<Cruceros> listaCruceros = new List<Cruceros>();
+        //public static ListadoViajes viajesHistorial = new ListadoViajes();
+
+        public static FormViaje formViaje = new FormViaje();
+        public static FormCruceros formCrucero = new FormCruceros();
+        public static FormVenderViaje formVenderViaje = new FormVenderViaje();
+        public static FormCrearCrucero formCrearCrucero = new FormCrearCrucero();
+
         private Form activeForm = null;
         public FormMain()
         {
@@ -79,24 +89,33 @@ namespace FormMain
 
         private void btn_VerViajes_Click(object sender, EventArgs e)
         {
-            FormViaje formViaje = new FormViaje();
+            //FormViaje formViaje = new FormViaje();
 
             //openChildForm(new FormViaje());
-            
-            formViaje.TopLevel = false;
+            /*
+            formViaje.TopLevel = true;
             formViaje.FormBorderStyle = FormBorderStyle.None;
             formViaje.Dock = DockStyle.Fill;
             panelFormulario.Controls.Add(formViaje);
             panelFormulario.Tag = formViaje;
             formViaje.BringToFront();
             formViaje.Show();
-            
+            */
+
+            formViaje.TopLevel = false;
+            formViaje.MdiParent = this;
+            formViaje.Dock = DockStyle.Fill;
+            panelFormulario.Controls.Add(formViaje);
+            panelFormulario.Tag = formViaje;
+            formViaje.BringToFront();
+            formViaje.Show();
+
             hideSubMenu();
         }
 
         private void btn_InfoCruceros_Click(object sender, EventArgs e)
         {
-            FormCruceros formCrucero = new FormCruceros();
+            //FormCruceros formCrucero = new FormCruceros();
 
             //openChildForm(new FormCruceros());
 
@@ -107,6 +126,46 @@ namespace FormMain
             panelFormulario.Tag = formCrucero;
             formCrucero.BringToFront();
             formCrucero.Show();
+
+            hideSubMenu();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            FormMain.viajes = Hardcodeo.ListaDeViajesHardcode();
+            FormMain.listaCruceros = Hardcodeo.ListaCrucerosHardcode();
+        }
+
+        private void btn_CrearViaje_Click(object sender, EventArgs e)
+        {
+            //FormVenderViaje formVenderViaje = new FormVenderViaje();
+
+            //openChildForm(new formVenderViaje());
+
+            formVenderViaje.TopLevel = false;
+            formVenderViaje.FormBorderStyle = FormBorderStyle.None;
+            formVenderViaje.Dock = DockStyle.Fill;
+            panelFormulario.Controls.Add(formVenderViaje);
+            panelFormulario.Tag = formVenderViaje;
+            formVenderViaje.BringToFront();
+            formVenderViaje.Show();
+
+            hideSubMenu();
+        }
+
+        private void btn_VenderCrucero_Click(object sender, EventArgs e)
+        {
+            //FormVenderViaje formVenderViaje = new FormVenderViaje();
+
+            //openChildForm(new formVenderViaje());
+
+            formCrearCrucero.TopLevel = false;
+            formCrearCrucero.FormBorderStyle = FormBorderStyle.None;
+            formCrearCrucero.Dock = DockStyle.Fill;
+            panelFormulario.Controls.Add(formCrearCrucero);
+            panelFormulario.Tag = formCrearCrucero;
+            formCrearCrucero.BringToFront();
+            formCrearCrucero.Show();
 
             hideSubMenu();
         }
